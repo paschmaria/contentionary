@@ -1,0 +1,1 @@
+this folder should contain all other components or functions that will be used by all other components, to avoid repetition of codes. the system's configuration should be in this folder and of course the routings.
