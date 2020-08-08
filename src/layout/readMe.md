@@ -1,0 +1,1 @@
+this should contain the application or system's arrangement. for instance, the header, the footer.

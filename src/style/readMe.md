@@ -1,0 +1,1 @@
+All the application styles should be here.
