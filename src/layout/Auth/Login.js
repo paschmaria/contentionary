@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container';
 import Hidden from '@material-ui/core/Hidden';
 
 import Aside from "../../components/Auth/Aside";
+import Input from "../../components/Inputs/FormInput";
 import { whiteColor, brandColor } from "../../style/main";
 import Logo from "../../media/images/logo.png";
 
@@ -25,6 +27,15 @@ const styles = theme => ({
 });
 
 class LoginPage extends Component {
+  state = {
+    showPassword: false
+  }
+
+  togglePasswordHandler = () => {
+    const showPassword = this.state.showPassword;
+    this.setState({ showPassword: !showPassword });
+  }
+
   render() {
     const { classes } = this.props;
     
@@ -51,10 +62,37 @@ class LoginPage extends Component {
             </Grid>
           </Hidden>
           <Grid item xs={12} sm={7}>
-            <img src={Logo} alt='[CONTENTIONARY]' />
-            <form>
-              <h1>Login to your Account</h1>
-            </form>
+            <Container>
+              <img src={Logo} alt='[CONTENTIONARY]' />
+              <form>
+                <h2 style={{ color: brandColor }}>
+                  Login to your Account
+                </h2>
+                <Input
+                  formControlProps={{
+                    fullWidth: true
+                  }}
+                  inputProps={{
+                    labelWidth: 100,
+                  }}
+                  type='text'
+                  labelText='Email Address'
+                />
+                <Input
+                  formControlProps={{
+                    fullWidth: true
+                  }}
+                  inputProps={{
+                    labelWidth: 70,
+                  }}
+                  type='password'
+                  labelText='Password'
+                  adornmentPos='end'
+                  clicked={this.togglePasswordHandler}
+                  showPassword={this.state.showPassword}
+                />
+              </form>
+            </Container>
           </Grid>
         </Grid>
       </div>

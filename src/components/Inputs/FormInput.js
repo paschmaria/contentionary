@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import FormControl from "@material-ui/core/FormControl";
+import FormHelperText from '@material-ui/core/FormHelperText';
 import InputLabel from "@material-ui/core/InputLabel";
 import OutlinedInput from '@material-ui/core/OutlinedInput';
 import InputAdornment from '@material-ui/core/InputAdornment';
@@ -12,15 +13,16 @@ import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import inputStyles from "../../style/components/Input";
 
 
-export default function CustomInput(props) {
+const customInput = props => {
   const classes = inputStyles();
   const {
     formControlProps,
     labelText,
+    errorText,
     id,
+    type,
     labelProps,
     inputProps,
-    type,
     error,
     white,
     inputRootCustomClasses,
@@ -32,8 +34,8 @@ export default function CustomInput(props) {
   } = props;
 
   const labelClasses = classNames({
-    [" " + classes.labelRootError]: error,
-    [" " + classes.labelRootSuccess]: success && !error
+    [` ${classes.labelRootError}`]: error,
+    [` ${classes.labelRootSuccess}`]: success && !error
   });
   const underlineClasses = classNames({
     [classes.underlineError]: error,
@@ -79,25 +81,37 @@ export default function CustomInput(props) {
       ) : null}
       <OutlinedInput
         id={id}
-        type={type}
+        type={showPassword ? 'text' : type}
         onChange={changed}
         startAdornment={adornmentPos === 'start' ? adornment : null}
         endAdornment={adornmentPos === 'end' ? adornment : null}
-        labelWidth={70}
         {...inputProps}
       />
+      {errorText !== undefined ? (
+        <FormHelperText className={classes.errorText}>
+          {errorText}
+        </FormHelperText>
+      ) : null}
     </FormControl>
   );
 }
 
-CustomInput.propTypes = {
+customInput.propTypes = {
   labelText: PropTypes.node,
+  errorText: PropTypes.node,
   labelProps: PropTypes.object,
   id: PropTypes.string,
+  type: PropTypes.string,
   inputProps: PropTypes.object,
   formControlProps: PropTypes.object,
   inputRootCustomClasses: PropTypes.string,
   error: PropTypes.bool,
   success: PropTypes.bool,
-  white: PropTypes.bool
+  white: PropTypes.bool,
+  clicked: PropTypes.bool,
+  changed: PropTypes.bool,
+  showPassword: PropTypes.bool,
+  adornmentPos: PropTypes.string,
 };
+
+export default customInput;

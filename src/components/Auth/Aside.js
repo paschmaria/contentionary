@@ -40,7 +40,7 @@ const aside = props => {
         </figure>
       </Box>
     </Box>
-  )
+  );
 };
 
 export default aside;
