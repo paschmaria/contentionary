@@ -1,8 +1,9 @@
 import React from "react";
-import Placeholder from "../../assets/images/exam-placeholder.png";
-import question_mark from "../../assets/images/question_mark.svg";
-import task from "../../assets/images/task.svg";
-import trophy from "../../assets/images/trophy.svg";
+
+import Placeholder from "../../media/images/exam-placeholder.png";
+import question_mark from "../../media/images/question_mark.svg";
+import task from "../../media/images/task.svg";
+import trophy from "../../media/images/trophy.svg";
 
 export default function RecentExams() {
   return (

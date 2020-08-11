@@ -1,7 +1,7 @@
 import React from "react";
-import appStore from "../../assets/images/Download_on_the_App_Store_Badge.svg";
-import googleStore from "../../assets/images/google-play-badge.svg";
-import phoneMockup from "../../assets/images/contentionary-phone-.png";
+import appStore from "../../media/images/Download_on_the_App_Store_Badge.svg";
+import googleStore from "../../media/images/google-play-badge.svg";
+import phoneMockup from "../../media/images/contentionary-phone-.png";
 
 export default function Download() {
   return (

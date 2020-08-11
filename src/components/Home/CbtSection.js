@@ -1,5 +1,5 @@
 import React from "react";
-import cbt_illustration from "../../assets/images/cbt_illustration.png";
+import cbt_illustration from "../../media/images/cbt_illustration.png";
 export default function CbtSection() {
   return (
     <div>

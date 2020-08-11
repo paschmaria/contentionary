@@ -8,14 +8,14 @@ export default function Header() {
       <div className="nav__wrapper">
         <nav className="navbar active_nav navbar-expand-lg navbar-dark py-md-0 fixd-top">
           <div className="container">
-            <a className="navbar-brand" href="index.html">
+            <Link className="navbar-brand" to="/">
               <img
                 src={logo}
                 alt="Business Logo"
                 width=""
                 className="img-fluid"
               />
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -30,7 +30,7 @@ export default function Header() {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ml-right landing-page">
                 <li className="nav-item mx-md-4 my-md-0 postion-relative">
-                  <a className="nav-link px-0 active" href="index.html">
+                  <Link className="nav-link px-0 active" to="/market-place">
                     <div className="text-center">
                       <svg
                         width="19"
@@ -58,7 +58,7 @@ export default function Header() {
                       </svg>
                     </div>
                     Marketplace
-                  </a>
+                  </Link>
                 </li>
               </ul>
 
@@ -75,7 +75,7 @@ export default function Header() {
                 <li className="nav-item mx-md-4 my-md-0 postion-relative">
                   <Link
                     className="nav-link px-0 btn nav__button nav__button--login"
-                    to="index.html"
+                    to="/login"
                   >
                     Login
                   </Link>
@@ -84,7 +84,7 @@ export default function Header() {
                 <li className="nav-item mx-md-4 my-md-0 postion-relative">
                   <Link
                     className="nav-link px-0 btn nav__button nav__button--signup"
-                    to="contact.html"
+                    to="/signup"
                   >
                     Create Account
                   </Link>
@@ -99,7 +99,7 @@ export default function Header() {
             <div className="row">
               <div className="col-lg-6">
                 <p className="my-2 text-white">
-                  <a href="">Own a Centre</a>
+                  <Link to="">Own a Centre</Link>
                 </p>
               </div>
 

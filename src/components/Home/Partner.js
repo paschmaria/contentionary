@@ -1,9 +1,9 @@
 import React from "react";
 
-import gruen from "../../assets/images/gruen.png";
-import ginel from "../../assets/images/ginel.png";
-import paragon from "../../assets/images/paragon.png";
-import trinity from "../../assets/images/trinity.png";
+import gruen from "../../media/images/gruen.png";
+import ginel from "../../media/images/ginel.png";
+import paragon from "../../media/images/paragon.png";
+import trinity from "../../media/images/trinity.png";
 
 export default function Partner() {
   return (

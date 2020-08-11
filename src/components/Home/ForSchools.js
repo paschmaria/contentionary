@@ -1,5 +1,5 @@
 import React from "react";
-import contentionaryForSchools from "../../assets/images/contentionary-for-schools.png";
+import contentionaryForSchools from "../../media/images/contentionary-for-schools.png";
 
 export default function ForSchools() {
   return (

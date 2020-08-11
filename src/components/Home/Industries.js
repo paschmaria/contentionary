@@ -1,9 +1,9 @@
 import React from "react";
 
-import education from "../../assets/images/education.png";
-import human_resources from "../../assets/images/human_resources.png";
-import field_service from "../../assets/images/field_service.png";
-import research from "../../assets/images/research.png";
+import education from "../../media/images/education.png";
+import human_resources from "../../media/images/human_resources.png";
+import field_service from "../../media/images/field_service.png";
+import research from "../../media/images/research.png";
 
 export default function Industries() {
   return (

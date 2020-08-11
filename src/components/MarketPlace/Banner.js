@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import professionalExams from "../../assets/images/professional-exams.png";
+import professionalExams from "../../media/images/professional-exams.png";
 
 export default function Banner() {
   return (

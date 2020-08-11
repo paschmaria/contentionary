@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import question_mark from "../../assets/images/question_mark.svg";
-import task from "../../assets/images/task.svg";
-import trophy from "../../assets/images/trophy.svg";
-import centerImage from "../../assets/images/center-card-image.png";
+import question_mark from "../../media/images/question_mark.svg";
+import task from "../../media/images/task.svg";
+import trophy from "../../media/images/trophy.svg";
+import centerImage from "../../media/images/center-card-image.png";
 
 export default function RatedCenter() {
   return (

@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import bannerIllustration from "../../assets/images/banner-illustration.png";
+
+import bannerIllustration from "../../media/images/bannerIllustration.png";
+import Logo from "../../media/images/logo.png";
 
 export default function Banner() {
   return (
